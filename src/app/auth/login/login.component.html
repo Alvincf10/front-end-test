@@ -1,54 +1,56 @@
 <div class="min-h-screen flex items-center justify-center bg-gray-100 container-fluid bg-blue">
-  <div class="relative bg-dark-blue p-8 rounded shadow-lg w-full w-[650px] h-[250px] polygon-container bg-[#1a2234]">
-    <div class="absolute hex-header polygon text-white header header-color w-[55%]">
-      <h1 class="text-3xl tracking-wide font-bold text-center p-3">LOGIN</h1>
+  <div class="relative">
+      <div class="absolute hex-header polygon text-white header header-color w-[55%] z-10">
+        <h1 class="text-3xl tracking-wide font-bold text-center p-3">LOGIN</h1>
+      </div>
+      <img src="assets/image/Frame.svg" class="width-full relative z-0">
+      <form class="w-[85%] space-y-4 absolute z-10 left-1/2 transform -translate-x-1/2 flex flex-col form-container">
+        <div class="mt-5">
+          <label for="username" class="block text-sm font-medium text-white">USERNAME</label>
+          <div class="group-input flex">
+            <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
+              <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
+              <input
+                id="username"
+                type="text"
+                [(ngModel)]="username"
+                name="username"
+                required
+                placeholder="Type Here"
+                class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-white">PASSWORD</label>
+          <div class="group-input flex">
+            <div class="left-input flex items-center border-b border-l border-t border-[#189BFA]">
+              <img class="pl-1" src="assets/image/lock-icon.svg" alt="" srcset="">
+            </div>
+            <div class="right-input w-full border-b border-r border-t border-[#189BFA]">
+              <input
+                id="password"
+                type="password"
+                [(ngModel)]="password"
+                name="password"
+                required
+                placeholder="Type Here"
+                class="mt-1 block w-full input-color px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#000000] focus:ring-0 focus:outline-none focus:text-white text-white sm:text-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="absolute button-login polygon z-20 mt-[5%]">
+        <button
+          type="submit"
+          (click)="login()"
+          class="w-full bg-[#004186] text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-bold focus:outline-none focus:ring focus:ring-blue-300"
+        >
+          LOGIN
+        </button>
+      </div>
     </div>
-    <form class="space-y-4">
-      <div class="mt-5">
-        <label for="username" class="block text-sm font-medium text-white">USERNAME</label>
-        <div class="group-input flex">
-          <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
-            <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
-            <input
-              id="username"
-              type="text"
-              [(ngModel)]="username"
-              name="username"
-              required
-              placeholder="Type Here"
-              class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
-            />
-          </div>
-        </div>
-      </div>
-      <div>
-        <label for="password" class="block text-sm font-medium text-white">PASSWORD</label>
-        <div class="group-input flex">
-          <div class="left-input flex items-center border-b border-l border-t border-[#189BFA]">
-            <img class="pl-1" src="assets/image/lock-icon.svg" alt="" srcset="">
-          </div>
-          <div class="right-input w-full border-b border-r border-t border-[#189BFA]">
-            <input
-              id="password"
-              type="password"
-              [(ngModel)]="password"
-              name="password"
-              required
-              placeholder="Type Here"
-              class="mt-1 block w-full input-color px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#000000] focus:ring-0 focus:outline-none focus:text-white text-white sm:text-sm"
-            />
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="absolute button-login polygon">
-    <button
-      type="submit"
-      (click)="login()"
-      class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-bold focus:outline-none focus:ring focus:ring-blue-300"
-    >
-      LOGIN
-    </button>
-  </div>
+
 </div>
