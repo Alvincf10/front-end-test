@@ -1,0 +1,36 @@
+.bg-blue{
+  background-color: #020C17;
+}
+
+.bg-dark-blue {
+  background-color: #00152C;
+}
+
+.header-color {
+  background-color: #002349;
+}
+
+.input-color {
+  background-color: #001F35;
+}
+
+.polygon {
+  clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+}
+
+.polygon-container {
+  clip-path: polygon(5% -20%, 95% -20%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0 90%, 0 10%)
+}
+
+.hex-header {
+  left: 50%;
+  top: -5px;
+  transform: translate(-50%, -50%);
+}
+
+.button-login {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  bottom: 20%;
+}
