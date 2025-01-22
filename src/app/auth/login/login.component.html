@@ -1,8 +1,10 @@
 <div class="min-h-screen flex items-center justify-center bg-gray-100 container-fluid bg-blue">
   <div class="relative">
-      <div class="absolute hex-header polygon text-white header header-color w-[55%] z-10">
-        <h1 class="text-3xl tracking-wide font-bold text-center p-3">LOGIN</h1>
+    <div class="border-shape login-position">
+      <div class="absolute polygon-header text-white header w-[55%] z-10">
+        <h1 class="text-3xl tracking-[3px] font-bold text-center p-3">LOGIN</h1>
       </div>
+    </div>
       <img src="assets/image/Frame.svg" class="width-full relative z-0">
       <form class="w-[85%] space-y-4 absolute z-10 left-1/2 transform -translate-x-1/2 flex flex-col form-container">
         <div class="mt-5">
@@ -26,7 +28,7 @@
           <label for="password" class="block text-sm font-medium text-white">PASSWORD</label>
           <div class="group-input flex">
             <div class="left-input flex items-center border-b border-l border-t border-[#189BFA]">
-              <img class="pl-1" src="assets/image/lock-icon.svg" alt="" srcset="">
+              <img class="ml-2 h-6 w-6" src="assets/image/lock-icon.svg" alt="" srcset="">
             </div>
             <div class="right-input w-full border-b border-r border-t border-[#189BFA]">
               <input
@@ -42,14 +44,16 @@
           </div>
         </div>
       </form>
-      <div class="absolute button-login polygon z-20 mt-[5%]">
-        <button
-          type="submit"
-          (click)="login()"
-          class="w-full bg-[#004186] text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-bold focus:outline-none focus:ring focus:ring-blue-300"
-        >
-          LOGIN
-        </button>
+      <div class="border-shape-login">
+        <div class="absolute button-login polygon-bottom z-20 mt-[5%]">
+          <button
+            type="submit"
+            (click)="login()"
+            class="w-full bg-custom text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-bold focus:outline-none focus:ring focus:ring-blue-300"
+          >
+            LOGIN
+          </button>
+        </div>
       </div>
     </div>
 
