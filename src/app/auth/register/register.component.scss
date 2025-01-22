@@ -6,6 +6,13 @@
   background-color: #00152C;
 }
 
+.background {
+  background-image: url('../../../assets/image/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .header-color {
   background-color: #002349;
 }
@@ -78,7 +85,7 @@
 }
 
 .form-container {
-  top: 35%;
+  top: 30%;
 }
 
 .bg-custom{
@@ -87,7 +94,7 @@
 
 @media (max-width: 640px) {
   .form-container {
-    top: 30%;
+    top: 25%;
   }
 
   .polygon-bottom{
@@ -97,7 +104,7 @@
 
 @media (max-width: 540px) {
   .form-container {
-    top: 25%;
+    top: 18%;
   }
 
   .polygon-bottom{

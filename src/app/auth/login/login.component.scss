@@ -2,6 +2,13 @@
   background-color: #020C17;
 }
 
+.background {
+  background-image: url('../../../assets/image/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-dark-blue {
   background-color: #00152C;
 }
@@ -47,8 +54,8 @@
 }
 .polygon-header {
   position: absolute;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
   background-color: #002349;
   clip-path: polygon(15% 0, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
   display: flex;
@@ -58,8 +65,8 @@
 .polygon-bottom {
   position: absolute;
   top: -10px;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
   background-color: #002349;
   clip-path: polygon(15% 0, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
   display: flex;
@@ -78,7 +85,7 @@
 }
 
 .form-container {
-  top: 35%;
+  top: 30%;
 }
 
 .bg-custom{
@@ -87,7 +94,7 @@
 
 @media (max-width: 640px) {
   .form-container {
-    top: 30%;
+    top: 25%;
   }
 
   .polygon-bottom{
@@ -97,7 +104,7 @@
 
 @media (max-width: 540px) {
   .form-container {
-    top: 25%;
+    top: 18%;
   }
 
   .polygon-bottom{
