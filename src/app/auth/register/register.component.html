@@ -4,38 +4,40 @@
         <h1 class="text-3xl tracking-wide font-bold text-center p-3">REGISTER</h1>
       </div>
       <img src="assets/image/Frame.svg" class="width-full relative z-0">
-      <form class="w-[85%] space-y-4 absolute z-10 left-1/2 transform -translate-x-1/2 flex flex-col form-container">
-        <div class="mt-5">
-          <label for="username" class="block text-sm font-medium text-white">USERNAME</label>
-          <div class="group-input flex">
-            <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
-              <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
-              <input
-                id="username"
-                type="text"
-                [(ngModel)]="username"
-                name="username"
-                required
-                placeholder="Type Here"
-                class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
-              />
+      <form class="w-[85%] space-y-4 absolute z-10 left-1/2 transform -translate-x-1/2 form-container">
+        <div class="flex">
+          <div class="mt-5 w-1/2 pr-2">
+            <label for="username" class="block text-sm font-medium text-white">USERNAME</label>
+            <div class="group-input flex">
+              <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
+                <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
+                <input
+                  id="username"
+                  type="text"
+                  [(ngModel)]="username"
+                  name="username"
+                  required
+                  placeholder="Type Here"
+                  class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mt-5">
-          <label for="name" class="block text-sm font-medium text-white">NAME</label>
-          <div class="group-input flex">
-            <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
-              <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
-              <input
-                id="name"
-                type="text"
-                [(ngModel)]="name"
-                name="name"
-                required
-                placeholder="Type Here"
-                class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
-              />
+          <div class="mt-5 w-1/2 pr-2">
+            <label for="name" class="block text-sm font-medium text-white">NAME</label>
+            <div class="group-input flex">
+              <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
+                <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
+                <input
+                  id="name"
+                  type="text"
+                  [(ngModel)]="name"
+                  name="name"
+                  required
+                  placeholder="Type Here"
+                  class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
+                />
+              </div>
             </div>
           </div>
         </div>
