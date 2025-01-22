@@ -1,7 +1,7 @@
 <div class="min-h-screen flex items-center justify-center bg-gray-100 container-fluid bg-blue">
-  <div class="relative bg-dark-blue p-8 rounded shadow-lg w-full w-[650px] h-[250px] polygon-container bg-[#1a2234]">
+  <div class="relative bg-dark-blue p-8 rounded shadow-lg w-full w-[650px] h-[350px] polygon-container bg-[#1a2234]">
     <div class="absolute hex-header polygon text-white header header-color w-[55%]">
-      <h1 class="text-3xl tracking-wide font-bold text-center p-3">LOGIN</h1>
+      <h1 class="text-3xl tracking-wide font-bold text-center p-3">REGISTER</h1>
     </div>
     <form class="space-y-4">
       <div class="mt-5">
@@ -14,6 +14,23 @@
               type="text"
               [(ngModel)]="username"
               name="username"
+              required
+              placeholder="Type Here"
+              class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mt-5">
+        <label for="name" class="block text-sm font-medium text-white">NAME</label>
+        <div class="group-input flex">
+          <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
+            <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
+            <input
+              id="name"
+              type="text"
+              [(ngModel)]="name"
+              name="name"
               required
               placeholder="Type Here"
               class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
@@ -45,10 +62,10 @@
   <div class="absolute button-login polygon">
     <button
       type="submit"
-      (click)="login()"
+      (click)="register()"
       class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-bold focus:outline-none focus:ring focus:ring-blue-300"
     >
-      LOGIN
+      Register
     </button>
   </div>
 </div>

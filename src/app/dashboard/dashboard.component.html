@@ -64,14 +64,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of items">
+      <tr *ngFor="let item of tasks">
         <td class="border border-gray-300 px-4 py-2">{{item.id}}</td>
         <td class="border border-gray-300 px-4 py-2">{{item.title}}</td>
         <td class="border border-gray-300 px-4 py-2">{{item.description}}</td>
         <td class="border border-gray-300 px-4 py-2">{{item.status}}</td>
         <td class="border border-gray-300 px-4 py-2">
-          <a (click)="action(item)" class="text-blue-500 cursor-pointer">Edit</a>
-          <a (click)="deleteData(item.id)" class="text-red-500 cursor-pointer">Delete</a>
+          <a (click)="action(item)" class="text-white-500 cursor-pointer bg-yellow-100 hover:bg-yellow-200 px-4 py-2 rounded-md border border-yellow-300 mr-2">Edit</a>
+          <a (click)="deleteData(item.id)" class="text-white-500 cursor-pointer bg-red-100 hover:bg-red-200 px-4 py-2 rounded-md border border-red-300">Delete</a>
         </td>
       </tr>
     </tbody>

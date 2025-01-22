@@ -13,7 +13,7 @@ import { TaskService } from '../service/task.service';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  items: any;
+  tasks: any;
   constructor(
     private router: Router,
     private taskService: TaskService,
@@ -36,16 +36,16 @@ export class DashboardComponent {
     }
     this.taskService.getAll(param).subscribe(
       (resp) => {
-        this.items = resp
+        this.tasks = resp
       }
      )
   }
 
-  action = (stockData = null) => {
+  action = (taskData = null) => {
     const dialogRef = this.dialog.open(ActionFormComponent, {
       width : '500px',
       maxHeight: '100vh',
-      data : stockData
+      data : taskData
     });
     dialogRef.afterClosed().subscribe(
       (result: any) => {

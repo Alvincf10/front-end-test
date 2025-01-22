@@ -1,43 +1,42 @@
-<div class="container mx-auto px-4">
+<div class="container mx-auto p-5">
   <div class="flex justify-between items-center mb-4">
     <div class="flex-1">
-      <h5 class="text-lg font-bold">{{ data ? 'Ubah' : 'Tambah' }} Item</h5>
-    </div>
-    <div class="flex justify-end">
-      <span [mat-dialog-close] class="text-xl cursor-pointer">
-        <i class="fas fa-times"></i>
-      </span>
+      <h5 class="text-lg font-bold">{{ data ? 'Ubah' : 'Tambah' }} Task</h5>
     </div>
   </div>
 
   <div>
     <form class="space-y-4">
-      <div class="flex mb-3">
-        <div class="flex-1 mr-2">
-          <label class="block text-sm font-medium text-gray-700">title</label>
-          <input type="text" name="title" [(ngModel)]="itemData.title"
-            class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Silahkan isi nama">
-        </div>
-        <div class="flex-1 mr-2">
-          <label class="block text-sm font-medium text-gray-700">description</label>
-          <input type="text" name="description" [(ngModel)]="itemData.description"
-            class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Silahkan isi nama">
-        </div>
-        <div class="flex-1 mr-2">
-          <label class="block text-sm font-medium text-gray-700">status</label>
-          <input type="text" name="status" [(ngModel)]="itemData.status"
-            class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Silahkan isi nama">
-        </div>
+      <div class="mb-3">
+        <label class="block text-sm font-medium text-gray-700">Title</label>
+        <input type="text" name="title" [(ngModel)]="itemData.title"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Silahkan isi nama">
+      </div>
 
-        <div class="flex items-center justify-center">
-          <button type="button" (click)="submitData()"
-            class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
-            Submit
-          </button>
-        </div>
+      <div class="mb-3">
+        <label class="block text-sm font-medium text-gray-700">Description</label>
+        <input type="text" name="description" [(ngModel)]="itemData.description"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Silahkan isi deskripsi">
+      </div>
+
+      <div class="mb-3">
+        <label class="block text-sm font-medium text-gray-700">Status</label>
+        <select name="status" [(ngModel)]="itemData.status"
+          class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option disabled>Pilih status</option>
+          <option value="pending" selected>Pending</option>
+          <option value="in progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <div class="flex justify-center">
+        <button type="button" (click)="submitData()"
+          class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+          Submit
+        </button>
       </div>
     </form>
   </div>

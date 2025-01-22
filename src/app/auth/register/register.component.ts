@@ -1,23 +1,22 @@
 import { Component } from '@angular/core';
 import { AuthServiceService } from '../../service/auth.service';
-import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.scss'
 })
-export class LoginComponent {
+export class RegisterComponent {
   username = '';
+  name = '';
   password = '';
-
   constructor(private authService: AuthServiceService, private router: Router) {}
-
-  login () {
-    this.authService.login(this.username, this.password).subscribe(
+  register () {
+    this.authService.register(this.username, this.name, this.password).subscribe(
       (response) => {
         console.log(response)
         localStorage.setItem('token', response.access_token);
@@ -31,5 +30,4 @@ export class LoginComponent {
       }
     )
   }
-
 }

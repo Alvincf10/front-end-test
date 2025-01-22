@@ -28,11 +28,14 @@ export class ActionFormComponent implements OnInit {
   }
 
    submitData = () => {
+    const userId = localStorage.getItem('user');
+
     const param: any = {
       id: this.itemData.id,
       title: this.itemData.title,
       description: this.itemData.description,
-      status: this.itemData.status
+      status: this.itemData.status,
+      user_id: userId
     };
     if (this.itemData.id){
       param.id = this.itemData.id;

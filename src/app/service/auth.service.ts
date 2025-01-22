@@ -33,6 +33,29 @@ export class AuthServiceService {
     );
   }
 
+  register = (username: string, name:string, password: string) => {
+    const param = {
+      username,
+      name,
+      password
+    };
+    const path = 'register';
+    const url = environment.APIURL + path;
+    const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+    });
+    return this.http.post(url, param, {headers})
+    .pipe(
+      map((response: any) => {
+        return response;
+      }),
+      catchError((error: any) => {
+        return throwError(() => error);
+      })
+    );
+  }
+
   logOut = () => {
     localStorage.clear();
     this.router.navigateByUrl('/login');
