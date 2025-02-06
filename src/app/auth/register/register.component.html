@@ -1,15 +1,16 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100 container-fluid background bg-blue">
+<div class="h-[100vh] flex items-center justify-center bg-gray-100 container-fluid background bg-blue">
   <div class="relative">
     <div class="border-shape login-position">
-      <div class="absolute polygon-header text-white header w-[55%] z-10">
-        <h1 class="text-3xl tracking-[3px] font-bold text-center p-3">REGISTER</h1>
+      <div class="absolute polygon-header text-white header z-10">
+        <h1 class="text-sm lg:text-4xl md:text-4xl tracking-[3px] font-bold text-center p-3">REGISTER</h1>
       </div>
     </div>
-      <img src="assets/image/Frame.svg" class="width-full relative z-0">
-      <form class="w-[85%] space-y-4 absolute z-10 left-1/2 transform -translate-x-1/2 form-container">
+    <div class="form-container mb-0 lg:mb-5">
+      <img src="assets/image/Frame.svg" class="w-[50vw] back-form relative z-0">
+      <form class="w-[85%] space-y-4 absolute z-10 left-1/2 transform -translate-x-1/2 flex flex-col form-container">
         <div class="flex">
-          <div class="mt-5 w-1/2 pr-2">
-            <label for="username" class="block text-sm font-medium text-white">USERNAME</label>
+          <div class="mt-2 lg:mr-2 lg:mt-4 w-[50%]">
+            <label for="username" class="block text-xs md:text-sm font-medium text-white">USERNAME</label>
             <div class="group-input flex mt-2">
               <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
                 <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
@@ -20,13 +21,13 @@
                   name="username"
                   required
                   placeholder="Type Here"
-                  class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
-                />
+                  class="ml-2 w-full px-3 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white text-xs md:text-sm md:text-base md:px-4"
+                  />
               </div>
             </div>
           </div>
-          <div class="mt-5 w-1/2 pr-2">
-            <label for="name" class="block text-sm font-medium text-white">NAME</label>
+          <div class="mt-2 lg:mt-4 w-[50%]">
+            <label for="username" class="block text-xs md:text-sm font-medium text-white">NAME</label>
             <div class="group-input flex mt-2">
               <div class="right-input w-full border-b border-l border-r border-t border-[#189BFA] bg-[#001F35] flex items-center">
                 <img class="ml-2 h-6 w-6" src="assets/image/user-icon.svg" alt="User Icon">
@@ -37,14 +38,14 @@
                   name="name"
                   required
                   placeholder="Type Here"
-                  class="ml-2 w-full px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white sm:text-sm"
-                />
+                  class="ml-2 w-full px-3 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#0A0F35] bg-[#001F35] focus:outline-none focus:text-white text-white text-xs md:text-sm md:text-base md:px-4"
+                  />
               </div>
             </div>
           </div>
         </div>
-        <div class="mt-5">
-          <label for="password" class="block text-sm font-medium text-white">PASSWORD</label>
+        <div class="mt-6">
+          <label for="password" class="block text-xs md:text-sm font-medium text-white">PASSWORD</label>
           <div class="group-input flex mt-2">
             <div class="left-input flex items-center border-b border-l border-t border-[#189BFA]">
               <img class="ml-2 h-6 w-6" src="assets/image/lock-icon.svg" alt="" srcset="">
@@ -57,22 +58,24 @@
                 name="password"
                 required
                 placeholder="Type Here"
-                class="mt-1 block w-full input-color px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#000000] focus:ring-0 focus:outline-none focus:text-white text-white sm:text-sm"
+                class="mt-1 block w-full input-color px-4 py-2 shadow-sm placeholder-[#28A5C3] focus:bg-[#000000] focus:ring-0 focus:outline-none focus:text-white text-white text-xs md:text-sm"
               />
             </div>
           </div>
         </div>
       </form>
+    </div>
       <div class="border-shape-login">
-        <div class="absolute button-login polygon-bottom z-20 mt-[5%]">
+        <div class="absolute button-login polygon-bottom z-20">
           <button
             type="submit"
             (click)="register()"
-            class="w-full bg-custom text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-bold focus:outline-none focus:ring focus:ring-blue-300"
+            class="w-full text-sm lg:text-2xl md:text-2xl bg-custom text-white px-4 py-2 rounded-lg hover:bg-blue-600 font-bold focus:outline-none focus:ring focus:ring-blue-300"
           >
             REGISTER
           </button>
         </div>
+      </div>
     </div>
 
 </div>
